@@ -1,0 +1,167 @@
+.ContactWrapper {
+    gap: 18px;
+    color: var(--text-color);
+}
+
+.ContactWrapper .pera {
+    width: 85%;
+    margin-bottom: 30px;
+    text-align: justify; /* Justify text for better paragraph appearance */
+}
+
+.ContactWrapper h2 {
+    font-size: 38px;
+    line-height: 30px;
+}
+
+.ContactContainer {
+    display: flex;
+    gap: 30%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ContactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Contactform {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px 40px 30px 10px;
+    background-color: var(--bg-color);
+}
+
+.Contactform h3 {
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.Contactform .inputWrapper {
+    min-height: 48px;
+    width: 100%;
+}
+
+.Contactform .inputWrapper input,
+.Contactform .inputWrapper textarea {
+    width: 100%;
+    height: 100%;
+    padding: 0 14px;
+    border: none;
+    outline: none;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+textarea {
+    height: 140px;
+    margin-bottom: 12px;
+}
+
+.Contactform button {
+    font-weight: 500;
+    align-self: flex-start; /* Align the button to the left */
+}
+
+/* Align input fields and textarea to the left */
+.Contactform .inputWrapper input,
+.Contactform .inputWrapper textarea {
+    text-align: left; /* Ensure text alignment is left */
+}
+
+/* Card Styles */
+.ContactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ContactInfo .card {
+    padding: 20px 30px;
+    background-color: var(--bg-color);
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+}
+
+.ContactInfo .card i {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.contact .card h3 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* Media Queries */
+
+/* For tablets and small screens (max-width: 900px) */
+@media screen and (max-width: 900px) {
+    .ContactContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ContactInfo,
+    .Contactform {
+        width: 100%;
+    }
+
+    .ContactInfo .card {
+        width: 90%; /* Adjust card width for smaller screens */
+        max-width: none; /* Remove max-width constraints */
+    }
+
+    .Contactform {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .Contactform .inputWrapper input,
+    .Contactform .inputWrapper textarea {
+        height: 48px; /* Adjust input and textarea height */
+        padding: 0 10px; /* Reduce padding to fit better on small screens */
+    }
+}
+
+/* For mobile screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .ContactContainer {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .ContactInfo,
+    .Contactform {
+        width: 100%;
+    }
+
+    .ContactInfo .card {
+        width: 100%; /* Full width for mobile screens */
+        max-width: none; /* Remove max-width constraints */
+        margin: 0 auto; /* Center card horizontally */
+    }
+
+    .Contactform {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .Contactform .inputWrapper input,
+    .Contactform .inputWrapper textarea {
+        height: 40px; /* Further reduce input and textarea height */
+        padding: 0 8px; /* Further reduce padding to fit well */
+    }
+
+    .Contactform button {
+        align-self: flex-start; /* Ensure button remains aligned to the left */
+    }
+}
